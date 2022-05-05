@@ -16,9 +16,7 @@ def send_start(message):
 		item2 = types.KeyboardButton("Вторая кнопка")
 		markup.add(item1, item2)
 		# 2 большие кнопки
-
 		# bot.send_message(message.chat.id,'список пуст', reply_markup = markup)
-
 	else:
 		markup = types.InlineKeyboardMarkup(row_width=2)
 		item1 = types.InlineKeyboardButton("первый", callback_data='first')
