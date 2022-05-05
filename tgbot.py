@@ -1,16 +1,12 @@
 import telebot
 from telebot import types
 
-s = open('bots.txt')
-print(s.read())
-
-bot = telebot.TeleBot("")
+bot = telebot.TeleBot("")  # need token
 
 
 @bot.message_handler(commands=['start', 'help'])
 def send_start(message):
 	if message.text == '/start':
-
 		markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
 		item1 = types.KeyboardButton("Первая кнопка")
 		item2 = types.KeyboardButton("Вторая кнопка")
@@ -28,7 +24,6 @@ def send_start(message):
 @bot.message_handler(content_types=['text'])
 def send_text(message):
 	# for всех мест в зависимости от кнопок на старте
-
 	bot.send_message(message.chat.id, "Описание места")
 	x = 43.9783
 	y = 15.3830
@@ -36,7 +31,3 @@ def send_text(message):
 
 
 bot.polling(none_stop=True)
-
-
-# сортировки.
-# Спорт комплексы
