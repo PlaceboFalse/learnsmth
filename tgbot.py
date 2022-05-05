@@ -21,8 +21,8 @@ def send_start(message):
 
 	else:
 		markup = types.InlineKeyboardMarkup(row_width=2)
-		item1 = types.InlineKeyboardButton("Бесплатно", callback_data='first')
-		item2 = types.InlineKeyboardButton("Платно", callback_data='second')
+		item1 = types.InlineKeyboardButton("первый", callback_data='first')
+		item2 = types.InlineKeyboardButton("второй", callback_data='second')
 		markup.add(item1, item2)
 		# 2 под сообщением бота
 
